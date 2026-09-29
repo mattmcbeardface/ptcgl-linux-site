@@ -1,34 +1,54 @@
 # PTCGL-Linux website
 
-Static one-page website for PTCGL-Linux.
+Website and signed Flatpak repository for PTCGL-Linux.
 
-## Files
+Production site: https://ptcgl-linux.com
 
-- `index.html` — complete one-page site
-- `styles.css` — responsive styling
-- `assets/hero.webp` — optimized hero background
-- `assets/hero.png` — original PNG fallback/source
+The www.ptcgl-linux.com hostname permanently redirects to the apex domain.
 
-## Deploy
+## Website
 
-This site has no build step and no runtime dependencies.
+The site is a static Cloudflare Pages deployment connected to this repository.
 
-For Cloudflare Pages, connect the GitHub repository as a Pages project and publish the repository root as static files. No framework or build command is required.
+Primary files:
 
-## Download link
+- index.html — one-page website
+- styles.css — responsive styling
+- assets/hero.webp — optimized hero background
+- _headers — Cloudflare Pages response headers
 
-The current download button points to:
+There is no application build step.
 
-`https://github.com/mattmcbeardface/ptcgl-linux/releases`
+## Flatpak distribution
 
-When the Flatpak repository / `.flatpakref` is published, replace that URL in `index.html` with the direct installation link.
+Signed Flatpak repository:
+
+    https://ptcgl-linux.com/flatpak/repo/
+
+Public installer:
+
+    https://ptcgl-linux.com/flatpak/Pokemon-TCG-Live.flatpakref
+
+Stable application ref:
+
+    app/io.github.PTCGLLinux/x86_64/stable
+
+The Flatpak repository is GPG signed.
+
+Never commit the private repository signing key.
+
+## Deployment
+
+Cloudflare Pages deploys automatically from the main branch.
+
+The repository root is the Pages output directory.
 
 ## Local preview
 
-From this directory:
+Run:
 
-```bash
-python3 -m http.server 8080
-```
+    python3 -m http.server 8080
 
-Then open `http://localhost:8080`.
+Then open:
+
+    http://localhost:8080
