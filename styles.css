@@ -63,18 +63,6 @@ a {
   font-size: 1.05rem;
 }
 
-.brand-mark {
-  width: 38px;
-  height: 38px;
-  display: grid;
-  place-items: center;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.34);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.28);
-  backdrop-filter: blur(10px);
-}
-
 .nav {
   display: flex;
   gap: 26px;
@@ -97,14 +85,16 @@ a {
   display: grid;
   align-items: center;
   overflow: hidden;
-  background: #1369be;
+  background:
+    #1369be
+    url("assets/hero.webp")
+    center center / cover
+    no-repeat
+    fixed;
 }
 
 .hero-media {
-  position: absolute;
-  inset: 0;
-  background: url("assets/hero.webp") center center / cover no-repeat;
-  transform: scale(1.012);
+  display: none;
 }
 
 .hero-shade {
@@ -230,6 +220,10 @@ a {
 }
 
 .download {
+  position: relative;
+  z-index: 2;
+  border-radius: 28px 28px 0 0;
+  box-shadow: 0 -20px 45px rgba(4, 28, 59, 0.18);
   background:
     radial-gradient(circle at top right, rgba(103,199,255,0.16), transparent 34%),
     var(--cream);
@@ -365,10 +359,6 @@ a {
   box-shadow: 0 8px 24px rgba(27,76,132,0.05);
 }
 
-.steps article:nth-child(2) {
-  transform: translateY(8px);
-}
-
 .steps article > span {
   display: grid;
   width: 38px;
@@ -393,6 +383,8 @@ a {
 }
 
 .about {
+  position: relative;
+  z-index: 2;
   color: #fff;
   background:
     radial-gradient(circle at 8% 0%, rgba(103,199,255,0.22), transparent 27%),
@@ -427,6 +419,8 @@ a {
 }
 
 footer {
+  position: relative;
+  z-index: 2;
   color: rgba(255,255,255,0.60);
   background: #06101f;
   border-top: 1px solid rgba(255,255,255,0.07);
@@ -448,6 +442,21 @@ footer {
 }
 
 @media (max-width: 820px) {
+  .hero {
+    background-attachment: scroll;
+    background-position: 61% center;
+  }
+
+  .hero {
+    position: relative;
+    top: auto;
+  }
+
+  .download {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
   .site-header {
     padding-top: 18px;
   }
@@ -464,9 +473,6 @@ footer {
     min-height: 720px;
   }
 
-  .hero-media {
-    background-position: 61% center;
-  }
 
   .hero-shade {
     background:
@@ -514,12 +520,13 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .steps article:nth-child(2) {
-    transform: none;
-  }
 }
 
 @media (max-width: 540px) {
+  .hero {
+    background-position: 66% center;
+  }
+
   .shell {
     width: min(100% - 28px, 1160px);
   }
@@ -540,9 +547,6 @@ footer {
     min-height: 700px;
   }
 
-  .hero-media {
-    background-position: 66% center;
-  }
 
   .hero-shade {
     background:
