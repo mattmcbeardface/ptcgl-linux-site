@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PTCGL-Linux — Pokémon TCG Live on Linux</title>
+  <meta name="description" content="An unofficial Linux launcher and compatibility package for Pokémon TCG Live.">
+  <meta name="theme-color" content="#1577df">
+  <meta property="og:title" content="PTCGL-Linux">
+  <meta property="og:description" content="An unofficial Linux launcher for Pokémon TCG Live.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/hero.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell nav-wrap">
+      <a class="brand" href="#top" aria-label="PTCGL-Linux home">
+        <span class="brand-mark">P</span>
+        <span>PTCGL-Linux</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#download">Download</a>
+        <a href="#about">What's this?</a>
+        <a href="https://github.com/mattmcbeardface/ptcgl-linux" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-media" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+
+      <div class="shell hero-content">
+        <div class="eyebrow">Unofficial • community-made • Linux-friendly</div>
+        <h1>Pokémon TCG Live<br><span>feels right at home on Linux.</span></h1>
+
+        <p class="hero-copy">
+          PTCGL-Linux handles the fiddly compatibility setup for you.
+          Install the Flatpak, launch once, and get back to building decks.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#download">Get the Flatpak</a>
+          <a class="button button-secondary" href="https://github.com/mattmcbeardface/ptcgl-linux" target="_blank" rel="noreferrer">Peek at the code</a>
+        </div>
+
+        <p class="hero-note">Free, open source, and made by a Linux player who just wanted the game to work.</p>
+      </div>
+    </section>
+
+    <section class="section download" id="download">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <span class="kicker">Ready to play?</span>
+            <h2>One install. Then just click and play.</h2>
+          </div>
+
+          <p>
+            The Flatpak sets up the launcher. On the first run, PTCGL-Linux
+            grabs the pieces it needs, installs the official game client, and
+            gets everything ready behind the scenes.
+          </p>
+        </div>
+
+        <div class="download-card">
+          <div class="download-main">
+            <div class="flatpak-badge">Flatpak</div>
+            <div>
+              <h3>Pokémon TCG Live for Linux</h3>
+              <p>For modern Linux desktops with Flatpak support.</p>
+            </div>
+          </div>
+
+          <div class="download-actions">
+            <a class="button button-download"
+               href="https://github.com/mattmcbeardface/ptcgl-linux/releases"
+               target="_blank"
+               rel="noreferrer">
+              Download latest release
+            </a>
+            <a class="text-link"
+               href="https://github.com/mattmcbeardface/ptcgl-linux"
+               target="_blank"
+               rel="noreferrer">
+              Source &amp; release notes →
+            </a>
+          </div>
+        </div>
+
+        <div class="steps" aria-label="How it works">
+          <article>
+            <span>01</span>
+            <h3>Grab the Flatpak</h3>
+            <p>Install it from your software manager or the release download.</p>
+          </article>
+
+          <article>
+            <span>02</span>
+            <h3>First launch does the boring stuff</h3>
+            <p>PTCGL-Linux prepares Proton and installs the official client for you.</p>
+          </article>
+
+          <article>
+            <span>03</span>
+            <h3>Play</h3>
+            <p>After that, launching Pokémon TCG Live works like any other desktop app.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="shell about-grid">
+        <div>
+          <span class="kicker kicker-light">So... what is this thing?</span>
+          <h2>A little Linux glue for the official game.</h2>
+        </div>
+
+        <div class="about-copy">
+          <p>
+            PTCGL-Linux is not a replacement client, remake, or custom game.
+            It wraps the official Pokémon TCG Live app in a managed Linux
+            compatibility environment so you don't have to babysit Wine,
+            Proton, prefixes, or login callbacks yourself.
+          </p>
+
+          <p>
+            The goal is simple: install it once, find Pokémon TCG Live in your
+            app menu, and use it like a normal Linux application.
+          </p>
+
+          <p class="disclaimer">
+            This is an independent, unofficial open-source project.
+            It is not affiliated with, endorsed by, or sponsored by
+            The Pokémon Company International.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-wrap">
+      <span>PTCGL-Linux</span>
+      <span>Made for Linux. The cards still belong to their respective owners.</span>
+    </div>
+  </footer>
+</body>
+</html>
