@@ -6,3 +6,27 @@
 
 /assets/*
   Cache-Control: public, max-age=604800
+
+# PTCGL-Linux Flatpak repository
+/flatpak/Pokemon-TCG-Live.flatpakref
+  Content-Type: application/vnd.flatpak.ref
+  Cache-Control: no-cache
+
+/flatpak/ptcgl-linux.flatpakrepo
+  Content-Type: application/vnd.flatpak.repo
+  Cache-Control: no-cache
+
+/flatpak/repo/summary
+  Cache-Control: public, max-age=300, must-revalidate
+
+/flatpak/repo/summary.sig
+  Cache-Control: public, max-age=300, must-revalidate
+
+/flatpak/repo/objects/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/flatpak/repo/deltas/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/flatpak/io.github.PTCGLLinux.png
+  Cache-Control: public, max-age=604800
