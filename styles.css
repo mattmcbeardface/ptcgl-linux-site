@@ -611,3 +611,19 @@ footer {
     transition: none;
   }
 }
+
+/* Pokémon authentication browser compatibility */
+.browser-notice {
+  margin: 24px 0 0;
+  padding: 14px 18px;
+  border-left: 3px solid #2387e8;
+  border-radius: 0 8px 8px 0;
+  background: rgba(35, 135, 232, 0.06);
+  color: #526784;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.browser-notice strong {
+  color: #142746;
+}
